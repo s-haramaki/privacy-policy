@@ -3,80 +3,473 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy</title>
+  <meta name="description" content="Official support and privacy policy for Ato Ikura, a simple personal budget app.">
+  <title>Ato Ikura — Support &amp; Privacy Policy</title>
+  <style>
+    :root {
+      --ink: #15252b;
+      --muted: #5f7076;
+      --teal: #007a7d;
+      --teal-dark: #005d60;
+      --teal-pale: #e8f5f4;
+      --line: #dce6e5;
+      --paper: #ffffff;
+      --background: #f5f8f7;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--teal-dark);
+      text-underline-offset: 3px;
+    }
+
+    header {
+      width: min(1080px, calc(100% - 40px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--teal);
+      color: white;
+      font-size: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .hero {
+      width: min(1080px, calc(100% - 40px));
+      margin: 12px auto 0;
+      padding: clamp(56px, 9vw, 108px) clamp(24px, 7vw, 76px);
+      border-radius: 34px;
+      background: linear-gradient(135deg, #e5f6f3, #bce5e1 55%, #91d0cb);
+      box-shadow: 0 24px 70px rgba(24, 74, 73, 0.12);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--teal-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 24px 0 32px;
+      color: #36575b;
+      font-size: clamp(17px, 2vw, 21px);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      background: var(--teal-dark);
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 10px 28px rgba(0, 93, 96, 0.24);
+    }
+
+    section {
+      width: min(960px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 92px 0 0;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.25;
+    }
+
+    .section-heading p:last-child {
+      color: var(--muted);
+    }
+
+    .contact-card,
+    .note,
+    .faq article,
+    .policy {
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px;
+      border-radius: 24px;
+    }
+
+    .contact-card h3,
+    .note h3 {
+      margin: 0 0 4px;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact-card > a {
+      flex: none;
+      font-weight: 800;
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 28px;
+      border-color: transparent;
+      border-radius: 24px;
+      background: var(--teal-pale);
+    }
+
+    .note p {
+      margin: 4px 0 10px;
+    }
+
+    .note ul {
+      margin: 0;
+      padding-left: 1.3em;
+    }
+
+    .caution {
+      color: #34575a;
+      font-weight: 700;
+    }
+
+    .faq {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .faq article {
+      padding: 26px;
+      border-radius: 22px;
+    }
+
+    .faq h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .faq p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .privacy {
+      padding-bottom: 72px;
+    }
+
+    .policy {
+      overflow: hidden;
+      border-radius: 26px;
+    }
+
+    .policy article {
+      padding: 26px 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .policy article:last-child {
+      border-bottom: 0;
+    }
+
+    .policy h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .policy p {
+      margin: 0;
+      color: #485a60;
+    }
+
+    footer {
+      width: min(960px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 30px 0 46px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 680px) {
+      header {
+        width: min(100% - 28px, 1080px);
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero {
+        width: min(100% - 24px, 1080px);
+        margin-top: 4px;
+        border-radius: 26px;
+      }
+
+      section {
+        width: min(100% - 28px, 960px);
+        padding-top: 70px;
+      }
+
+      .contact-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .faq {
+        grid-template-columns: 1fr;
+      }
+
+      .policy article {
+        padding: 24px;
+      }
+
+      footer {
+        width: min(100% - 28px, 960px);
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <a class="brand" href="#top" aria-label="Ato Ikura support home">
+      <span class="brand-mark" aria-hidden="true">¥</span>
+      <span>Ato Ikura</span>
+    </a>
+
+    <nav aria-label="Page navigation">
+      <a href="#support">Support</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+  </header>
+
   <main>
-    <h1>Privacy Policy</h1>
+    <div class="hero" id="top">
+      <p class="eyebrow">Official Support</p>
+      <h1>Simple budgets for spending with confidence.</h1>
+      <p class="lead">
+        Get help, report an issue, or share feedback about Ato Ikura.
+      </p>
+      <a class="button" href="mailto:b080171@gmail.com">
+        Contact Support
+      </a>
+    </div>
 
-    <p>
-      Budget Manager (the “App”) respects your privacy and handles information
-      in accordance with the following policy.
-    </p>
+    <section id="support">
+      <div class="section-heading">
+        <p class="eyebrow">Support</p>
+        <h2>How can we help?</h2>
+      </div>
 
-    <h2>1. Information We Collect</h2>
-    <p>
-      The App does not collect personally identifiable information such as your
-      name, email address, or physical address.
-    </p>
-    <p>
-      Budget, expense, income, and other data entered into the App are stored
-      locally on your device.
-    </p>
+      <div class="contact-card">
+        <div>
+          <h3>Email Support</h3>
+          <p>For questions, bug reports, feedback, and feature requests.</p>
+        </div>
+        <a href="mailto:b080171@gmail.com">b080171@gmail.com</a>
+      </div>
 
-    <h2>2. Data Transmission</h2>
-    <p>
-      The App does not transmit the budget or financial data you enter to the
-      developer or to any third-party server.
-    </p>
+      <div class="note">
+        <h3>When reporting an issue</h3>
+        <p>Please include the following information when possible:</p>
+        <ul>
+          <li>Your iPhone model</li>
+          <li>Your iOS version</li>
+          <li>The steps that led to the issue</li>
+          <li>Any error message or unexpected behavior</li>
+        </ul>
+        <p class="caution">
+          Please remove any private budget names, amounts, or notes you do not wish to share.
+        </p>
+      </div>
 
-    <h2>3. Sharing with Third Parties</h2>
-    <p>
-      The App does not sell, provide, or share your personal information with
-      third parties.
-    </p>
+      <div class="faq" aria-label="Frequently asked questions">
+        <article>
+          <h3>Where is my data stored?</h3>
+          <p>
+            Your budgets and expenses are stored locally on your device.
+            They are not automatically sent to a server operated by the developer.
+          </p>
+        </article>
 
-    <h2>4. Data Management</h2>
-    <p>
-      Data stored in the App is managed on your device.
-    </p>
-    <p>
-      Stored data may be deleted if you uninstall the App, change or reset your
-      device, or due to unexpected errors, defects, bugs, data corruption, or
-      other technical issues.
-    </p>
+        <article>
+          <h3>How can I prepare for a new device?</h3>
+          <p>
+            Use the in-app backup feature to export a JSON backup file,
+            then keep it in a location you trust.
+          </p>
+        </article>
 
-    <h2>5. Disclaimer Regarding Data Loss</h2>
-    <p>
-      The developer does not guarantee the permanent storage, integrity, or
-      availability of data stored in the App.
-    </p>
-    <p>
-      To the maximum extent permitted by applicable law, the developer shall
-      not be liable for any loss, damage, or disadvantage resulting from the
-      loss, corruption, deletion, or inability to access data caused by bugs,
-      software errors, device failures, operating system updates, user actions,
-      or other unforeseen circumstances.
-    </p>
+        <article>
+          <h3>Can I protect a private budget?</h3>
+          <p>
+            Yes. Each budget can be protected with Face ID or your device passcode.
+            You can also mask its details on the Home screen.
+          </p>
+        </article>
 
-    <h2>6. Children’s Privacy</h2>
-    <p>
-      The App does not knowingly collect personal information from children.
-    </p>
+        <article>
+          <h3>Does changing currency convert amounts?</h3>
+          <p>
+            No. Changing the currency changes the display format only.
+            The app does not perform currency conversion.
+          </p>
+        </article>
+      </div>
+    </section>
 
-    <h2>7. Changes to This Privacy Policy</h2>
-    <p>
-      This Privacy Policy may be updated as the App is modified or as applicable
-      laws and regulations change.
-    </p>
+    <section class="privacy" id="privacy">
+      <div class="section-heading">
+        <p class="eyebrow">Privacy Policy</p>
+        <h2>Your data stays yours.</h2>
+        <p>Last updated: August 21, 2026</p>
+      </div>
 
-    <h2>8. Contact</h2>
-    <p>
-      If you have any questions regarding this Privacy Policy, please contact
-      the developer using the contact information provided on the App Store.
-    </p>
+      <div class="policy">
+        <article>
+          <h3>1. Our approach</h3>
+          <p>
+            Ato Ikura (the “App”) respects your privacy.
+            Data used for budget management is generally handled and stored locally on your device.
+          </p>
+        </article>
 
-    <p>Effective Date: August 19, 2026</p>
+        <article>
+          <h3>2. Information we collect</h3>
+          <p>
+            The App does not collect or transmit your name, email address,
+            location, advertising identifier, usage history, or other personal data
+            to a server operated by the developer. No account registration is required.
+          </p>
+        </article>
+
+        <article>
+          <h3>3. Data stored on your device</h3>
+          <p>
+            Budgets, expenses, budget additions, notes, and settings you enter
+            are stored locally on your device. Deleting the App may delete this data
+            unless you have saved a separate backup.
+          </p>
+        </article>
+
+        <article>
+          <h3>4. Backups and sharing</h3>
+          <p>
+            When you use the backup feature, your budgets and notes are exported
+            to a JSON file. When you use the sharing feature, the information you
+            choose is passed to the destination you select. These actions occur only
+            when you initiate them. You are responsible for securely managing
+            exported files and shared content.
+          </p>
+        </article>
+
+        <article>
+          <h3>5. Face ID and passcode authentication</h3>
+          <p>
+            The App uses authentication features provided by Apple.
+            The App does not receive or store your face image, device passcode,
+            or other biometric information.
+          </p>
+        </article>
+
+        <article>
+          <h3>6. Third parties and external services</h3>
+          <p>
+            The App does not include developer-operated advertising, analytics,
+            or personal-data sharing with third parties. If you choose an external
+            service through the system share sheet, that service’s privacy policy applies.
+          </p>
+        </article>
+
+        <article>
+          <h3>7. Changes to this policy</h3>
+          <p>
+            This policy may be updated when the App changes or when required by law.
+            Material changes will be announced on this page or in the App when appropriate.
+          </p>
+        </article>
+
+        <article>
+          <h3>8. Contact</h3>
+          <p>
+            For questions about this policy, contact
+            <a href="mailto:b080171@gmail.com">b080171@gmail.com</a>.
+          </p>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <span>© 2026 Ato Ikura</span>
+    <a href="mailto:b080171@gmail.com">b080171@gmail.com</a>
+  </footer>
 </body>
 </html>
